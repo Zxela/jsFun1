@@ -6,8 +6,26 @@ body {
 }
 
 main {
+    border-radius: 2.5%;
+    border-style: outset;
     background-color: #f0f0f0;
     margin: 20px auto;
     max-width: 450px;
     padding: 20px;
+}
+#input {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #AFC3DF;
+    padding: 4px;
+    border-radius: 2.5%;
+}
+#initals {
+    width: 20%
+}
+#message {
+    width: 60%
+}
+#send-button {
+    width: 20%
 }
