@@ -25,9 +25,11 @@ function getWeather(callback) {
 			var data = JSON.parse(response.body);
 			var weather = data.consolidated_weather[0];
 			callback(
-				`Currently the forecast is ${weather.weather_state_name} with winds blowing ${Math.round(weather.wind_direction_compass)} at ${
-					weather.wind_speed
-				}... Currently it is ${Math.round(weather.the_temp)} with a high of ${Math.round(weather.max_temp)} and a low of ${Math.round(weather.min_temp)}.`
+				`Currently the forecast is ${weather.weather_state_name} with winds blowing ${
+					weather.wind_direction_compass
+				} at ${Math.round(weather.wind_speed)}... Currently it is ${Math.round(
+					weather.the_temp
+				)} with a high of ${Math.round(weather.max_temp)} and a low of ${Math.round(weather.min_temp)}.`
 			);
 		}
 	});
