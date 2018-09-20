@@ -2,13 +2,13 @@ var socket = io();
 
 $("form").on("submit", function() {
 	var initials = $("#initials").val();
-	var text = `${initials} ${$("#message").val()}`;
-	socket.emit("message", text);
+	var text = $("#message").val();
+	socket.emit("message", initials, text);
 	$("#message").val("");
 	return false;
 });
-socket.on("message", function(msg) {
+socket.on("message", function(initials, msg) {
 	$("<li>")
-		.text(msg)
+		.text(`${initials} says: ${msg}`)
 		.appendTo("#history");
 });
